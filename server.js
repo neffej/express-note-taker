@@ -26,11 +26,13 @@ app.post('/api/notes', (req, res) => {
     console.info(`${req.method} request receieved to add a note`)
 
     const { title, text } = req.body;
+    const id = Math.floor(Math.random()*99)+1
 
     if(title && text){
         const newNote = {
             title,
             text,
+            id,
         };
 
         const noteString = JSON.stringify(newNote);
