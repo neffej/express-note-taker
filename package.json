@@ -1,14 +1,28 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "",
+  "description": "concise, web-based note taking app",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "start": "node server.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Eric Neff",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.16.4"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neffej/express-note-taker.git"
+  },
+  "keywords": [
+    "notes",
+    "express"
+  ],
+  "bugs": {
+    "url": "https://github.com/neffej/express-note-taker/issues"
+  },
+  "homepage": "https://github.com/neffej/express-note-taker#readme"
 }
