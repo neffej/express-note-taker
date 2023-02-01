@@ -15,7 +15,7 @@
   The purpose of this project is to showcase the interlink between a front-end HTML and JavaScript architecture and it's associated backend server files.  Beyond that, this project is a fully functional, deployed, online note-taking app that allows a user to save and delete notes.  It's useful for organizing thoughts, lists, passwords, and anything other piece of knowledge that could use a cloud-based organizer.  
 
   ## Installation
-  The deployed project is available at Heroku at the link below. Simply navigate to the website and follow the prompts.
+  The deployed project is via at Heroku at <https://note-expression-4185.herokuapp.com/>. Simply navigate to the website and follow the prompts.
 
   ## Usage
   At the website, you can enter a note's title and body, then click the Floppy Disk icon to save the note, or the "+" icon to add another note.  As one accrues notes, to which there is no limit, the stored notes appear on the left side of the site. To remove a note, simply click the "trash" icon next to the discarded note.  There is no login, so this website will store notes from anyone and display all notes to everyone - beware what you share!
