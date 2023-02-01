@@ -25,6 +25,7 @@ app.get('/api/notes', (req,res) =>
     if (err) {
         console.error(err);
     }else{
+        console.log('getting file')
         const parsedData = JSON.parse(data);
     res.json(parsedData);
     }}
@@ -70,6 +71,49 @@ app.post('/api/notes', (req, res) => {
         res.status(500).json('Error in saving note');
     }
 });
+
+app.delete('/api/notes/:id', (req, res) => {
+    console.info(`${req.method} request receieved to delete a note with id of ${req.params.id}`)
+    res.send("DELETE request Called")
+
+
+    fs.readFile('./db/db.json', 'utf-8',(err, data) =>{
+        if (err) {
+            console.error(err);
+        }else{
+            // Convert string
+            const parsedNotes = JSON.parse(data);
+
+            // Cycle array and remove object
+            parsedNotes.forEach((element, index)=> {
+                const { id } = req.params
+
+                if(element.id == id){
+                    console.log('match', element)
+                    // Remove object from array
+                    parsedNotes.splice(index, 1)
+                    console.log(parsedNotes)
+
+                    // Rewrite file to remove object from file
+                    fs.writeFile('./db/db.json', JSON.stringify(parsedNotes, null, 4), (writeErr) =>
+                    writeErr
+                    ? console.error(writeErr)
+                    : console.log('Successfully updated reviews!')
+                    );
+
+                    // // Return db file
+                    // const response = {
+                    //     status: 'success',
+                    //     body: parsedNotes,
+                    return
+                    };
+                })
+            }
+        });
+});
+                    
+
+
 
 
 
